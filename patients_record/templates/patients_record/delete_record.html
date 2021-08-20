@@ -1,0 +1,10 @@
+{% extends 'patients_record/add_record.html' %}
+{% block detailform %}
+    <form action="{% url 'delete_record' %}" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <button>Delete-></button>
+    </form>
+{% endblock %}
